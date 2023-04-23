@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminManageInventory">
+
+    <Button
+        android:id="@+id/adminAddItemButton"
+        android:layout_width="380dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="156dp"
+        android:text="Add Item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/adminAddProductName"
+        android:layout_width="259dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:nextFocusForward="@id/adminAddItemQty"
+        android:hint="Product Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/adminAddItemDescription"
+        android:layout_width="259dp"
+        android:layout_height="77dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:hint="Product Description"
+        android:nextFocusForward="@id/adminAddItemPrice"
+        android:singleLine="false"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminAddProductName" />
+
+    <EditText
+        android:id="@+id/adminAddItemQty"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Qty"
+        android:nextFocusForward="@id/adminAddItemDescription"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toEndOf="@+id/adminAddProductName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/adminAddItemPrice"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="112dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Price"
+        android:nextFocusForward="@id/adminAddItemQty"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toEndOf="@+id/adminAddProductName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/adminManageInventoryRecyclerView"
+        android:layout_width="413dp"
+        android:layout_height="516dp"
+        android:layout_marginTop="216dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/product_card" />
+</androidx.constraintlayout.widget.ConstraintLayout>
